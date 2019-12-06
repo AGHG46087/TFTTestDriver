@@ -16,7 +16,8 @@ Strings to flash and then out to heap this is going to be weird so listen up.
 
 The plan here is to place string liternals into flash memory to save space utilzing pgmspace. and as you may b=have guessed, it is IMMUTABLE. And the simple thought of strcpyu()/strncpy() would be good. **Nope!** need to go a step further.
 
-To do that all string liternal must take the following form:
+To do that all the string liternals of interest for this feature  must take the following form:
+        `(char*)PSTR("Your string here");` . for example:
         `setPatternName((char*)PSTR("Your string here"));`
 The reason for this is `<pgmspace.h>` there is the macro definition of `PSTR` which will place the literal in flash
 in flash memory. BUT. we need to now cast that to a const char* for the function call.
