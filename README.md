@@ -23,6 +23,10 @@ With that said, the patternname, which we normaly just use `strcpy`, we need to 
 `strcpy_P()` states the string will come from Flashmemory and copy it into SRAM space. 
 Once it is in SRAM sapce we can maniputate it all we want. 😀
 
+## To get this up and running - here it folks
+Download trhe repot and compile the module place on your Arduino and let er rip.
+
+
 
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
