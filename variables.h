@@ -2,10 +2,10 @@
 #define MY_APP_VARS_H_   242
 
 
+//(p.x>60 && p.x<(60+360) && p.y>110 && p.y<(110+40))
+#define IS_WITHIN_RANGE(x,a,b) ((x>=a) && (x<=b))
 
 #define ARRAY_SIZE(A) (sizeof(A) / sizeof((A)[0]))
-#define IS_WITHIN_RANGE(x,a,b) ((x>=a) && (x<=b))
-//(p.x>60 && p.x<(60+360) && p.y>110 && p.y<(110+40))
 #define IS_POINT_IN_TARGET(p,startX,xPxWidth,startY,yPxHeight) ((startX <= p.x && p.x < (startX+xPxWidth)) && (startY <= p.y && p.y < (startY+yPxHeight)))
 // Define some TFT readable colour codes to human readable names
 #define MAX_PATTERN_NAME_LEN 30
