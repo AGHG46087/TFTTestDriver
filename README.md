@@ -26,10 +26,7 @@ With that said, the patternname, which we normaly just use `strcpy`, we need to 
 Once it is in SRAM sapce we can maniputate it all we want. 😀
 
 ## To get this up and running - here it is folks:
-Download trhe repot and compile the module place on your Arduino and let er rip.
+Download this repo, open the sketch, compile and place the executable module on your Arduino... Let 'er rip.
 
-
-
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
 
