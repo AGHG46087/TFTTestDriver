@@ -13,7 +13,7 @@ TFT Test Driver is a mini project I used to help me define how to use the TFT to
 
 There is a few items I wanted to accomplish in this project.
 * Obviously, I wanted to work on a TFT understand its interfaces - and of course touch controls.
-* At first the items began to seem repetative.  So Looked for ways to boiler plate a few items. for my screens anyway.
+* At first the items began to seem repetative.  So Looked for ways to boiler plate a few items. for my screens anyway.👀
 * Memory, Memory and oh yeah not alot of memory
 
 One of the biggest items that is rather confining is memory, especially in embedded systems and simply there is no just add more memory mentality.  Global strings take up a chunck of memory,  String literals take up more - ughh! **So I set out to find a way to reduce all the bloat that is caused by the string literals**
@@ -38,7 +38,7 @@ With that said, the patternname, which we normaly just use `strcpy`, we need to 
 `strcpy_P()` states the string will come from Flashmemory and copy it into SRAM space. 
 Once it is in SRAM sapce we can maniputate it all we want. 😀
 
-One note:  If you are using the `Serial.print()` and `Serial.println()`  There is a also simple solution here ...Thats right ##F()## your strings. For example: `Serial.println(F("My String literal here"));`  
+One note:  If you are using the `Serial.print()` and `Serial.println()`  There is a also simple solution here ...Thats right **F()** your strings. For example: `Serial.println(F("My String literal here"));`  Every little bit helps.
 
 
 
