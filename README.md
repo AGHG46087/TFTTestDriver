@@ -1,7 +1,7 @@
 # TFT Test Driver: #
 
-TFT Test Driver is a mini project I used to help me define how to use the TFT touch screeen for controls and display
 
+TFT Test Driver is a mini project I used to help me define how to use the TFT touch screeen for controls and display
 
 ### What is this repository for? ###
 
@@ -21,7 +21,6 @@ One of the biggest items that is rather confining is memory, especially in embed
 At first I though about the String class, yeah no good.  because of the manner in the class works it will fragment memory, to a point where the application simply dies. #NoBueno!
 
 I also though about an array, of character and index. well ok, helped only very little.
-
 
 # Striking Gold - Flash the strings...
 
