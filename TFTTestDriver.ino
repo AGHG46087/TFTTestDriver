@@ -31,16 +31,8 @@ void setup() {
 
   myBootloader();
 
-  bTouchLast = bTouch = false;
-  
-  savePointX1 = 77; // saverPointX[77] => pageSaverSeconds[20]  
-  savePointX2 = 125; // saverPointX[125] => meterCycleSeconds[30]  
-  oldSavePointX = 0;
-
-  oldSaverSeconds = pageSaverSeconds  = 20;
-  oldMeterCycleSeconds = meterCycleSeconds = 30;
-  
 }
+
 void myBootloader() {
   Serial.println("MyBootLoader...");
   
@@ -50,6 +42,15 @@ void myBootloader() {
   StartupScreen();
   delay(700);
 
+  
+  bTouchLast = bTouch = false;
+  
+  savePointX1 = 77; // saverPointX[77] => pageSaverSeconds[20]  
+  savePointX2 = 125; // saverPointX[125] => meterCycleSeconds[30]  
+  oldSavePointX = 0;
+
+  oldSaverSeconds = pageSaverSeconds  = 20;
+  oldMeterCycleSeconds = meterCycleSeconds = 30;
   
   currentPage = lastPage = currentPage = PG_HOME;
 //  buttonState = lastButtonState = buttonPressID = 0;        // counter for the number of button presses
