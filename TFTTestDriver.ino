@@ -7,6 +7,7 @@ MCUFRIEND_kbv tft;
 
 #include "variables.h"
 
+// Function to check a map conversion values,  when deciding on targets
 void testAndPrintMapRange(int fromLow, int fromHigh, int toLow, int toHigh) {
   int temp = 0;
   for ( int i = fromLow; i < fromHigh; i++ ) {
@@ -15,7 +16,7 @@ void testAndPrintMapRange(int fromLow, int fromHigh, int toLow, int toHigh) {
   }
   
 }
-
+// This is my init function
 void setup() {
     // put your setup code here, to run once:
   Serial.begin(9600);
@@ -30,6 +31,15 @@ void setup() {
 
   myBootloader();
 
+  bTouchLast = bTouch = false;
+  
+  savePointX1 = 77; // saverPointX[77] => pageSaverSeconds[20]  
+  savePointX2 = 125; // saverPointX[125] => meterCycleSeconds[30]  
+  oldSavePointX = 0;
+
+  oldSaverSeconds = pageSaverSeconds  = 20;
+  oldMeterCycleSeconds = meterCycleSeconds = 30;
+  
 }
 void myBootloader() {
   Serial.println("MyBootLoader...");
@@ -40,15 +50,6 @@ void myBootloader() {
   StartupScreen();
   delay(700);
 
-  
-  bTouchLast = bTouch = false;
-  
-  savePointX1 = 77; // saverPointX[77] => pageSaverSeconds[20]  
-  savePointX2 = 125; // saverPointX[125] => meterCycleSeconds[30]  
-  oldSavePointX = 0;
-
-  oldSaverSeconds = pageSaverSeconds  = 20;
-  oldMeterCycleSeconds = meterCycleSeconds = 30;
   
   currentPage = lastPage = currentPage = PG_HOME;
 //  buttonState = lastButtonState = buttonPressID = 0;        // counter for the number of button presses
